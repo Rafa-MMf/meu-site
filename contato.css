@@ -22,7 +22,6 @@ body {
 section {
     position: relative;
     width: 100%;
-    min-height: 100vh;
     padding: 100px;
     text-align: center;
 
@@ -33,7 +32,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    margin-top: 3%;
     display: flex;
     justify-content: space-between;
 }
@@ -64,6 +63,7 @@ header li:hover {
 }
 .box {
     margin: auto;
+    margin-top: 4%;
     width: 80%;
     height: 700px;
     background-color: rgba(192, 192, 192, 0.4);
