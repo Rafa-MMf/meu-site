@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio Rafa Mendes</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <img src="logo2.png" class="logo">
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="index.html">Página inicial</a></li>
+                <li><a href="outros.html">Meus projetos</a></li>
+                <li><a href="https://www.canva.com/design/DAEW3CtLCII/C6Cgecof0ZkRLKp2mXAJDA/view?utm_content=DAEW3CtLCII&utm_campaign=designshare&utm_medium=link&utm_source=viewer" target="_blank">Meu currículo</a></li>
+                <li><a href="contato.html">Contate-me</a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <div class="textBox">
+                <h2>Não são apenas projetos,<br> são os meus <span>Favoritos</span></h2>
+                <p>Olá me chamo Rafaela sou designer e estou cursando programação, fiz este site <br> para ser meu portifólio. Pretendo colocar o máximo de projetos realizados aqui <br> com objetivo de ver meu progresso e ter referências do meu trabalho. <br> Separei os três projetos que mais gostei do resultado, espero que gostem.</p>
+                <a href="outros.html">Ver mais projetos</a>
+            </div>
+            <div class="imgBox">
+                <img src="trunfo1.png" class="imagem1">
+            </div>
+        </div>
+
+        <ul class="thumb">
+            <li><a class="botao1" onclick="imgSlider('trunfo1.png'); changeCircleColor('#660003')">Trunfo X-Men</a></li>
+            <li><a class="botao2" onclick="imgSlider('tabelaP1.png'); changeCircleColor('#484848')">Tabela Periódica</a></li>
+            <li><a class="botao3" onclick="imgSlider('sagas1.png'); changeCircleColor('#a50d38')">Melhores Sagas</a></li>
+            <li><a class="botao4" onclick="imgSlider('mexicans1.png'); changeCircleColor('#4d5f07')">MM's Mexican 3</a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.imagem1').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    /*background-color: #660003;*/
+    background-image: url('fundo1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+
+section {
+    position: relative;
+    width: 100%;
+    padding: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    position: relative;
+    right: 5%;
+    max-width: 10%;
+    min-width: 100px;
+    margin-top: 5%;
+}
+header ul {
+    position: relative;
+    display: flex;
+    margin-top: 5%;
+    font-size: 20px;
+}
+header ul li {
+    list-style: none;
+    padding: 10px;
+}
+header ul li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-align: center;
+    background-color: rgba(192, 192, 192, 0.2);
+    width: 200px;
+    margin: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 8px;
+}
+header li:hover {
+    transform: scale(1.1);
+}
+
+#box {
+    width: 100%;
+    margin: 10% auto;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  
+}
+.box1 {
+	width: 90%;
+    background-color: rgba(192, 192, 192, 0.2);
+    border-radius: 15px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.box1 h3{
+
+    font-weight: 500%;
+    color: #fff;
+    margin: 15px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+.box1 ul{
+    display: flex;
+    flex-direction: column;
+}
+.box1 il{
+    width: 30%;
+    font-size: 90%;
+    padding: 5px;
+    line-height: 40px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    margin: 10px auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: 0.25s;
+}
+.box1 il:hover{
+    transform: scale(1.05);
+  
+}
+.box1 a{
+    font-size:1.5em;
+    color: white;
+    text-decoration: none;
+}
+
+.coluna {
+    display: flex;
+    flex-direction: row;
+  
+}
+
+
+
+
+@media (max-width: 1190px) {
+    header{
+        padding: 10px 30px;
+
+    }
+    header .logo {
+        max-width: 80px;
+        margin-left: 5%;
+    }
+    header ul {
+        display: none;
+    }
+    .toggle {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: url(menu.png);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+        z-index: 11;
+    }
+    .toggle.active {
+        position: fixed;
+        background: url(close.png);
+        background-size: 25;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    header ul.navigation.active {
+        position: fixed;
+        right: 20px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+        z-index: 10;
+    }
+    header ul li a {
+        font-size: 1.5em;
+        margin: 5px 0;
+    }
+    section {
+        padding: 20px 100px 200px;
+    }
+    #box {
+        margin: 20% auto;
+    }
+}
